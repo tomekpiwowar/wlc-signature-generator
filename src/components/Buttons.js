@@ -33,21 +33,17 @@ function Buttons(props) {
     setSlideUp(1);
   };
 
-  function togglePrettyPrint() {
+  const togglePrettyPrint = () => {
     setPrettyPrint((prevState) => !prevState);
-  }
+  };
 
-  function toggleShowCode() {
+  const toggleShowCode = () => {
     setShowCode((prevState) => !prevState);
-  }
+  };
 
   const codePreviewStyles = {
     transform: showCode ? "translateX(0)" : "translateX(100%)",
   };
-
-  // React.useEffect(() => {
-  //   props.templates[props.template - 1];
-  // }, [showCode]);
 
   return (
     <>

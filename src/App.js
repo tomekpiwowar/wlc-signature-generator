@@ -15,7 +15,7 @@ export default function App() {
     template: "1",
   });
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
       return {
@@ -23,7 +23,7 @@ export default function App() {
         [name]: type === "checkbox" ? checked : value,
       };
     });
-  }
+  };
 
   /* Conversion to Base64 with FileReader API - optimize problems! */
   // const convertToBase64 = (event) => {
