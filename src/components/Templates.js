@@ -3,7 +3,8 @@ import Preview from "./Preview";
 import Buttons from "./Buttons";
 
 function Templates(props) {
-  const template1 = `<style type="text/css">
+  const template1 = `<meta http-equiv="content-type" content="text/html;charset=utf-8" >
+  <style type="text/css">
   #outlook a {
     padding: 0;
   }
@@ -334,7 +335,8 @@ function Templates(props) {
 </div>
 `;
 
-  const template2 = `<style type="text/css">
+  const template2 = `<meta http-equiv="content-type" content="text/html;charset=utf-8" >
+  <style type="text/css">
 #outlook a {
   padding: 0;
 }
@@ -640,7 +642,8 @@ p {
 </div>
 `;
 
-  const template3 = `<style type="text/css">
+  const template3 = `<meta http-equiv="content-type" content="text/html;charset=utf-8" >
+  <style type="text/css">
 #outlook a {
   padding: 0;
 }
