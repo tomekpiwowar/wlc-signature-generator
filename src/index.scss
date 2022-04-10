@@ -196,6 +196,28 @@ body {
     padding: 0.8rem 1rem;
     border: none;
 
+    &--expandable {
+      margin-bottom: 0;
+    }
+
+    &--extra {
+      margin-bottom: 0;
+      animation: slideDown 0.5s 1;
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      30% {
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
     &::placeholder {
       color: var(--gray);
     }
@@ -208,6 +230,24 @@ body {
 
     label {
       margin: 0;
+    }
+  }
+
+  &__extra-line {
+    color: #00bda5;
+    margin: 0.2rem 0 0.45rem 0;
+    font-size: 0.8rem;
+    text-align: right;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    transition: color 0.5s;
+
+    span {
+      font-size: 1.1rem;
+      transition: transform 0.5s 0.1s;
     }
   }
 }
@@ -298,7 +338,6 @@ body {
 
   &__close {
     color: #e67582;
-    margin-left: auto;
     font-size: 0.9rem;
     margin: 0 0 0 auto;
     text-decoration: underline;
