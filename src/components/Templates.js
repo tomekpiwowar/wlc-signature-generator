@@ -121,7 +121,9 @@ function Templates(props) {
                             <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
                               <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;text-align:left;text-transform: uppercase;color:#db002f;">${
                                 props.jobTitle
-                              }</div>
+                              }${
+    props.extraLine ? `<br>${props.jobTitle2}` : ""
+  }</div>
                             </td>
                           </tr>
                           <tr>
@@ -444,12 +446,18 @@ p {
                         </tr>
                         <tr>
                           <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:700;line-height:1;text-align:left;text-transform:uppercase;color:#000000;">${props.name}</div>
+                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:700;line-height:1;text-align:left;text-transform:uppercase;color:#000000;">${
+                              props.name
+                            }</div>
                           </td>
                         </tr>
                         <tr>
                           <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
-                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;text-align:left;text-transform: uppercase;color:#db002f;">${props.jobTitle}</div>
+                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;text-align:left;text-transform: uppercase;color:#db002f;">${
+                              props.jobTitle
+                            }${
+    props.extraLine ? `<br>${props.jobTitle2}` : ""
+  }</div>
                           </td>
                         </tr>
                         <tr>
@@ -457,7 +465,11 @@ p {
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                               <tr>
                                 <td align="center" bgcolor="#ffffff" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:0;background:#ffffff;" valign="middle">
-                                  <a href="tel:${props.phone}" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${props.phone}</a>
+                                  <a href="tel:${
+                                    props.phone
+                                  }" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${
+    props.phone
+  }</a>
                                 </td>
                               </tr>
                             </table>
@@ -468,7 +480,11 @@ p {
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                               <tr>
                                 <td align="center" bgcolor="#ffffff" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:0;background:#ffffff;" valign="middle">
-                                  <a href="mailto:${props.email}" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${props.email}</a>
+                                  <a href="mailto:${
+                                    props.email
+                                  }" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${
+    props.email
+  }</a>
                                 </td>
                               </tr>
                             </table>
@@ -751,12 +767,18 @@ p {
                         </tr>
                         <tr>
                           <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:700;line-height:1;text-align:left;text-transform:uppercase;color:#000000;">${props.name}</div>
+                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:700;line-height:1;text-align:left;text-transform:uppercase;color:#000000;">${
+                              props.name
+                            }</div>
                           </td>
                         </tr>
                         <tr>
                           <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
-                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;text-align:left;text-transform: uppercase;color:#db002f;">${props.jobTitle}</div>
+                            <div style="font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;text-align:left;text-transform: uppercase;color:#db002f;">${
+                              props.jobTitle
+                            }${
+    props.extraLine ? `<br>${props.jobTitle2}` : ""
+  }</div>
                           </td>
                         </tr>
                         <tr>
@@ -764,7 +786,11 @@ p {
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                               <tr>
                                 <td align="center" bgcolor="#ffffff" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:0;background:#ffffff;" valign="middle">
-                                  <a href="tel:${props.phone}" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${props.phone}</a>
+                                  <a href="tel:${
+                                    props.phone
+                                  }" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${
+    props.phone
+  }</a>
                                 </td>
                               </tr>
                             </table>
@@ -775,7 +801,11 @@ p {
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                               <tr>
                                 <td align="center" bgcolor="#ffffff" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:0;background:#ffffff;" valign="middle">
-                                  <a href="mailto:${props.email}" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${props.email}</a>
+                                  <a href="mailto:${
+                                    props.email
+                                  }" style="display:inline-block;background:#ffffff;color:#000000;font-family:Verdana, Open Sans, sans-serif;font-size:13px;font-weight:400;line-height:1;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">${
+    props.email
+  }</a>
                                 </td>
                               </tr>
                             </table>

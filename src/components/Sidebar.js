@@ -52,10 +52,38 @@ function Sidebar(props) {
             onChange={props.handleChange}
             name="jobTitle"
             value={props.jobTitle}
-            className="settings__field"
+            className="settings__field settings__field--expandable"
             placeholder="e.g. Front-end Developer"
           />
-          <label>Phone Numeber</label>
+          {props.extraLine && (
+            <input
+              type="text"
+              onChange={props.handleChange}
+              name="jobTitle2"
+              value={props.jobTitle2}
+              className="settings__field settings__field--extra"
+              placeholder="e.g. Team Leader"
+            />
+          )}
+          <p
+            className="settings__extra-line"
+            onClick={props.toggleExtraLine}
+            style={
+              props.extraLine ? { color: "#e67582" } : { color: "#00bda5" }
+            }
+          >
+            <span
+              style={
+                props.extraLine
+                  ? { transform: "rotate(45deg)" }
+                  : { transform: "rotate(0)" }
+              }
+            >
+              +
+            </span>
+            {props.extraLine ? "Remove extra line" : "Add extra line"}
+          </p>
+          <label>Phone Number</label>
           <input
             type="tel"
             onChange={props.handleChange}

@@ -8,12 +8,15 @@ export default function App() {
   const [formData, setFormData] = React.useState({
     name: "Jan Kowalski",
     jobTitle: "Front-end Developer",
+    jobTitle2: "Team Leader",
     phone: "+48 123 123 123",
     email: "jkowalski@whitelabelcoders.com",
     avatar: placeholder,
     addRadius: false,
     template: "1",
   });
+
+  const [extraLine, setExtraLine] = React.useState(false);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -75,11 +78,16 @@ export default function App() {
     }
   };
 
+  const toggleExtraLine = () => {
+    setExtraLine((prevState) => !prevState);
+  };
+
   return (
     <div className="app-container">
       <Sidebar
         name={formData.name}
         jobTitle={formData.jobTitle}
+        jobTitle2={formData.jobTitle2}
         phone={formData.phone}
         email={formData.email}
         avatar={formData.avatar}
@@ -87,17 +95,19 @@ export default function App() {
         template={formData.template}
         handleChange={handleChange}
         convertToBase64={convertToBase64}
+        extraLine={extraLine}
+        toggleExtraLine={toggleExtraLine}
       />
       <Main
         name={formData.name}
         jobTitle={formData.jobTitle}
+        jobTitle2={formData.jobTitle2}
         phone={formData.phone}
         email={formData.email}
         avatar={formData.avatar}
         addRadius={formData.addRadius}
         template={formData.template}
-        handleChange={handleChange}
-        convertToBase64={convertToBase64}
+        extraLine={extraLine}
       />
     </div>
   );
